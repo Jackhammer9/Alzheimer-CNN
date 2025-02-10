@@ -1,4 +1,6 @@
-# Alzheimer's Detection CNN Project
+<div align = 'center'> <img src = "https://raw.githubusercontent.com/Jackhammer9/Alzheimer-CNN/refs/heads/main/.github/logo.webp", width = 20% , height=auto></div>
+
+<h1 align = 'center'> Alzheimer's Detection Convolutional Neural Network  </h1>
 
 ## Overview
 This project focuses on detecting Alzheimer's disease using a **Convolutional Neural Network (CNN)** trained on MRI scans. The model classifies images into four categories representing different stages of Alzheimer's progression.
@@ -10,13 +12,19 @@ This project focuses on detecting Alzheimer's disease using a **Convolutional Ne
 - **Visualization**: Generates various performance graphs, including training curves, confusion matrices, and precision-recall curves.
 
 ## Dataset
+<a href='https://www.kaggle.com/datasets/yasserhessein/dataset-alzheimer'> Dataset Source </a> <br>
 The dataset consists of MRI images classified into four categories:
 1. **Non-Demented**
 2. **Very Mild Demented**
 3. **Mild Demented**
 4. **Moderate Demented**
 
-Images are preprocessed with resizing, normalization, and augmentation.
+<br> <br>
+<img src = "https://raw.githubusercontent.com/Jackhammer9/Alzheimer-CNN/refs/heads/main/.github/different-classes.png">
+<img src = "https://raw.githubusercontent.com/Jackhammer9/Alzheimer-CNN/refs/heads/main/.github/class-distribution.png">
+
+Images are preprocessed with resizing, normalization, and augmentation. <br>
+<img src = "https://raw.githubusercontent.com/Jackhammer9/Alzheimer-CNN/refs/heads/main/.github/augmented-pictures.png">
 
 ## Model Architecture
 The CNN model consists of:
@@ -29,22 +37,19 @@ The CNN model consists of:
 ## Training
 The model is trained using:
 ```python
-model.fit(train_dataset, epochs=50, validation_data=test_dataset, class_weight=class_weights)
-```
-With callbacks for **early stopping** and **learning rate reduction**:
-```python
-from tensorflow.keras.callbacks import ReduceLROnPlateau, EarlyStopping
-
-reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=2, min_lr=1e-6)
-early_stopping = EarlyStopping(monitor='val_loss', patience=3, restore_best_weights=True)
+model.fit(train_dataset, epochs=25, validation_data=test_dataset, class_weight=class_weights)
 ```
 
 ## Evaluation
 The model is evaluated using:
-- **Accuracy & Loss Curves**
-- **Precision-Recall & ROC-AUC Curves**
-- **Confusion Matrix**
-- **Classification Report**
+- **Accuracy & Loss Curves** <br><br>
+  <img src = "https://raw.githubusercontent.com/Jackhammer9/Alzheimer-CNN/refs/heads/main/.github/tvvloss.png"> <br>
+  <img src = "https://raw.githubusercontent.com/Jackhammer9/Alzheimer-CNN/refs/heads/main/.github/tvvaccuracy.png">
+- **Precision-Recall & ROC-AUC Curves** <br> <br>
+  <img src = "https://raw.githubusercontent.com/Jackhammer9/Alzheimer-CNN/refs/heads/main/.github/prc.png"> <br>
+  <img src = "https://raw.githubusercontent.com/Jackhammer9/Alzheimer-CNN/refs/heads/main/.github/roc.png">
+- **Confusion Matrix** <br> <br>
+   <img src = "https://raw.githubusercontent.com/Jackhammer9/Alzheimer-CNN/refs/heads/main/.github/confusion.png">
 
 Example of evaluation code:
 ```python
