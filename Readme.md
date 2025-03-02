@@ -21,7 +21,7 @@ The dataset consists of MRI images classified into four categories:
 
 <br> <br>
 <img src = "https://raw.githubusercontent.com/Jackhammer9/Alzheimer-CNN/refs/heads/main/.github/different-classes.png">
-<img src = "https://raw.githubusercontent.com/Jackhammer9/Alzheimer-CNN/refs/heads/main/.github/class-distribution.png">
+<img src = "https://github.com/Jackhammer9/Alzheimer-CNN/blob/main/.github/ClassDistribution.png?raw=true">
 
 Images are preprocessed with resizing, normalization, and augmentation. <br>
 <img src = "https://raw.githubusercontent.com/Jackhammer9/Alzheimer-CNN/refs/heads/main/.github/augmented-pictures.png">
@@ -49,7 +49,7 @@ The model is evaluated using:
   <img src = "https://raw.githubusercontent.com/Jackhammer9/Alzheimer-CNN/refs/heads/main/.github/prc.png"> <br>
   <img src = "https://raw.githubusercontent.com/Jackhammer9/Alzheimer-CNN/refs/heads/main/.github/roc.png">
 - **Confusion Matrix** <br> <br>
-   <img src = "https://raw.githubusercontent.com/Jackhammer9/Alzheimer-CNN/refs/heads/main/.github/confusion.png">
+   <img src = "https://github.com/Jackhammer9/Alzheimer-CNN/blob/main/.github/ConfusionMatrixNew.png?raw=true">
 
 Example of evaluation code:
 ```python
